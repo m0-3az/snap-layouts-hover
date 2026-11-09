@@ -39,10 +39,10 @@ KDE's own settings.
 
 ## Install
 
-Download `snaplayoutshover-<version>.kwinscript` from Releases:
+Download `snaplayoutflyout-<version>.kwinscript` from Releases:
 
 ```bash
-kpackagetool6 --type KWin/Script --install snaplayoutshover-1.0.0.kwinscript
+kpackagetool6 --type KWin/Script --install snaplayoutflyout-1.1.2.kwinscript
 ```
 
 Then open **System Settings > Window Management > KWin Scripts**, tick
@@ -52,7 +52,7 @@ Building it yourself:
 
 ```bash
 ./tools/package.sh
-kpackagetool6 --type KWin/Script --install dist/snaplayoutshover-1.0.0.kwinscript
+kpackagetool6 --type KWin/Script --install dist/snaplayoutflyout-1.1.2.kwinscript
 ```
 
 ## Settings

@@ -8,7 +8,8 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/package"
 
 VERSION="$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["KPlugin"]["Version"])' "$SRC/metadata.json")"
-OUT="$ROOT/dist/snaplayoutshover-$VERSION.kwinscript"
+ID="$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["KPlugin"]["Id"])' "$SRC/metadata.json")"
+OUT="$ROOT/dist/$ID-$VERSION.kwinscript"
 
 # Development-only switches must never ship enabled.
 if grep -q "readonly property bool devShow: true" "$SRC/contents/ui/main.qml"; then

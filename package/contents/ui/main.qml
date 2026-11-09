@@ -31,7 +31,7 @@ Item {
     property var watched: []
 
     function log(msg) {
-        console.info("snaplayoutshover: " + msg);
+        console.info("snaplayoutflyout: " + msg);
     }
 
     function inside(r, p) {
