@@ -6,6 +6,7 @@
  * zone and reports clicks.
  */
 import QtQuick
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 
 PlasmaCore.Dialog {
@@ -78,6 +79,9 @@ PlasmaCore.Dialog {
 
     property rect area: Qt.rect(0, 0, 0, 0)
     property var screen: null
+    // Windows to preview, target first. Each layout shows the target in the
+    // zone it would land in, then one icon per zone for the other windows.
+    property var windows: []
     property int hoverLayout: -1
     property int hoverZone: -1
 
@@ -198,6 +202,28 @@ PlasmaCore.Dialog {
                             readonly property real x1: Math.round((zone.x + zone.w) * preview.width)
                             readonly property real y0: Math.round(zone.y * preview.height)
                             readonly property real y1: Math.round((zone.y + zone.h) * preview.height)
+                            // Which window would land in this zone: the target
+                            // in the hovered zone (or the first zone), the
+                            // other windows in stacking order for the rest.
+                            readonly property var appWindow: {
+                                const wins = flyout.windows;
+                                if (!wins || wins.length === 0)
+                                    return null;
+                                const n = preview.zones.length;
+                                const tz = (flyout.hoverLayout === preview.index
+                                            && flyout.hoverZone >= 0) ? flyout.hoverZone : 0;
+                                if (index === tz)
+                                    return wins[0];
+                                let k = 0;
+                                for (let i = 0; i < n; i++) {
+                                    if (i === tz)
+                                        continue;
+                                    if (i === index)
+                                        return wins.length > 1 + k ? wins[1 + k] : null;
+                                    k++;
+                                }
+                                return null;
+                            }
 
                             x: x0 + (zone.x > 0.001 ? Math.floor(gap / 2) : 0)
                             y: y0 + (zone.y > 0.001 ? Math.floor(gap / 2) : 0)
@@ -214,6 +240,15 @@ PlasmaCore.Dialog {
 
                             Behavior on color {
                                 ColorAnimation { duration: 90 }
+                            }
+
+                            Kirigami.Icon {
+                                anchors.centerIn: parent
+                                readonly property int fit: Math.max(10, Math.min(22, parent.width - 8, parent.height - 8))
+                                width: fit
+                                height: fit
+                                source: parent.appWindow ? parent.appWindow.icon : ""
+                                visible: parent.appWindow !== null
                             }
                         }
                     }

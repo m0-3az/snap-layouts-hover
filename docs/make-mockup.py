@@ -53,6 +53,16 @@ COLS, ROWS = 4, 2
 TILE_GAP = 20
 PAD = 20
 GAP = 6
+ICON_SIZE = 18
+
+# A few generic app icons, so the mockup shows what the real flyout does:
+# each zone previews the window that would land there.
+APP_ICONS = {
+    (0, 1): "#3b82f6",
+    (3, 2): "#f59e0b",
+    (4, 1): "#22c55e",
+    (7, 1): "#ef4444",
+}
 
 
 def pane_rects(layout):
@@ -84,11 +94,19 @@ def main():
         tx = PAD + (i % COLS) * (TILE_W + TILE_GAP)
         ty = PAD + (i // COLS) * (TILE_H + TILE_GAP)
         out.append(f'  <g transform="translate({tx} {ty})">')
-        for (x, y, w, h) in pane_rects(layout):
+        for zi, (x, y, w, h) in enumerate(pane_rects(layout)):
             out.append(
                 f'    <rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" '
                 'rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>'
             )
+            color = APP_ICONS.get((i, zi))
+            if color:
+                cx = x + w / 2 - ICON_SIZE / 2
+                cy = y + h / 2 - ICON_SIZE / 2
+                out.append(
+                    f'    <rect x="{cx:.1f}" y="{cy:.1f}" width="{ICON_SIZE}" '
+                    f'height="{ICON_SIZE}" rx="4" fill="{color}"/>'
+                )
         out.append("  </g>")
     out.append("</svg>")
     path = Path(__file__).resolve().parent / "flyout.svg"

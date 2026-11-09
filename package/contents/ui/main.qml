@@ -154,6 +154,7 @@ Item {
         }
         targetZone = z;
         const g = w.frameGeometry;
+        flyout.windows = [w].concat(fillers(w, w.output));
         flyout.showAt(Qt.point(Math.round(g.x + g.width - flyout.panelWidth),
                                Math.round(z.y + z.height + 6)),
                       workArea(w.output), w.output);
@@ -291,6 +292,7 @@ Item {
             root.target = w;
             root.targetZone = root.captionZone(w);
             const g = w.frameGeometry;
+            flyout.windows = [w].concat(root.fillers(w, w.output));
             flyout.showAt(Qt.point(Math.round(g.x + g.width - flyout.panelWidth),
                                    Math.round(root.targetZone.y + root.targetZone.height + 6)),
                           root.workArea(w.output), w.output);

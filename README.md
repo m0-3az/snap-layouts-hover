@@ -13,6 +13,9 @@ KDE's own settings.
 - Rest the pointer for about 250 ms on the top-right caption strip of a window
   (its minimize/maximize/close buttons) and a flyout with eight layouts opens
   below them.
+- Every preview shows the app icons that would fill its zones: the hovered
+  window goes into the zone under the pointer, the next windows into the
+  remaining zones, so you see the result before clicking.
 - Hover a zone to highlight it. Click it: that window goes there, then the
   remaining zones are filled with your other windows on the same screen
   (topmost first). Picking a layout always rearranges the zones, even when
