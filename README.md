@@ -1,5 +1,7 @@
 # Snap Layouts Hover
 
+![Package](https://github.com/m0-3az/snap-layouts-hover/actions/workflows/package.yml/badge.svg)
+
 Windows 11 style **Snap Layouts** for KDE Plasma 6, triggered the way Windows
 does it: rest the pointer on a window's caption buttons and pick a layout.
 

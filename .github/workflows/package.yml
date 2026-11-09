@@ -1,0 +1,48 @@
+name: Package
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate package metadata and config
+        run: python3 -I tools/validate.py
+
+      - name: Install zip if missing
+        run: command -v zip || (sudo apt-get update && sudo apt-get install -y zip)
+
+      - name: Build the .kwinscript
+        id: build
+        run: echo "path=$(./tools/package.sh)" >> "$GITHUB_OUTPUT"
+
+      - name: Check the archive contents
+        run: |
+          set -e
+          PKG="${{ steps.build.outputs.path }}"
+          echo "built: $PKG"
+          LIST="$(unzip -Z1 "$PKG")"
+          for path in metadata.json contents/ui/main.qml contents/ui/Flyout.qml \
+                      contents/ui/Config.qml contents/config/main.xml LICENSE; do
+            echo "$LIST" | grep -qx "$path" || { echo "missing: $path"; exit 1; }
+          done
+          VERSION="$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["KPlugin"]["Version"])' package/metadata.json)"
+          echo "$PKG" | grep -q -- "-$VERSION.kwinscript$" || { echo "file name does not match version $VERSION"; exit 1; }
+          echo "archive ok"
+
+      - name: Upload the package
+        uses: actions/upload-artifact@v4
+        with:
+          name: kwinscript
+          path: ${{ steps.build.outputs.path }}
+          if-no-files-found: error
