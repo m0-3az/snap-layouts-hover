@@ -24,7 +24,10 @@ jobs:
 
       - name: Build the .kwinscript
         id: build
-        run: echo "path=$(./tools/package.sh)" >> "$GITHUB_OUTPUT"
+        run: |
+          set -e
+          PKG="$(./tools/package.sh)"
+          echo "path=$PKG" >> "$GITHUB_OUTPUT"
 
       - name: Check the archive contents
         run: |

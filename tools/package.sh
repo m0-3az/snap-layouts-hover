@@ -19,7 +19,7 @@ fi
 
 mkdir -p "$ROOT/dist"
 rm -f "$OUT"
-STAGE="$(mktemp -d /tmp/opencode/snaplayoutshover.XXXXXX)"
+STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
 cp -r "$SRC"/. "$STAGE"
 cp "$ROOT/LICENSE" "$STAGE/LICENSE"
