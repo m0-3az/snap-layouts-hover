@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SnapLayoutsConfigForm</class>
+ <widget class="QWidget" name="SnapLayoutsConfigForm">
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QGroupBox" name="hoverGroup">
+     <property name="title">
+      <string>Snap layout flyout</string>
+     </property>
+     <layout class="QVBoxLayout" name="groupLayout">
+      <item>
+       <widget class="QLabel" name="hint">
+        <property name="text">
+         <string>Rest the pointer on a window's caption buttons (top right). Click a zone in the flyout to put that window there; the remaining zones are filled with the other windows.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="form">
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="kcfg_HoverEnabled">
+          <property name="text">
+           <string>Show the flyout on hover</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="widthLabel">
+          <property name="text">
+           <string>Hotspot width:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="kcfg_ZoneWidth">
+          <property name="minimum">
+           <number>24</number>
+          </property>
+          <property name="maximum">
+           <number>300</number>
+          </property>
+          <property name="suffix">
+           <string> px</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="heightLabel">
+          <property name="text">
+           <string>Hotspot height (0 = titlebar):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="kcfg_ZoneHeight">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>80</number>
+          </property>
+          <property name="suffix">
+           <string> px</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="delayLabel">
+          <property name="text">
+           <string>Hover delay:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="kcfg_HoverDelay">
+          <property name="minimum">
+           <number>50</number>
+          </property>
+          <property name="maximum">
+           <number>2000</number>
+          </property>
+          <property name="suffix">
+           <string> ms</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QCheckBox" name="kcfg_AutoFill">
+          <property name="text">
+           <string>Fill the other zones with the other windows</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QCheckBox" name="kcfg_NeedsOthers">
+          <property name="text">
+           <string>Only show it when another window is open</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

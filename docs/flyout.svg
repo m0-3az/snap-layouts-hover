@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="370" viewBox="0 0 940 370" role="img" aria-label="Snap layout flyout with eight layouts">
+  <rect x="0.5" y="0.5" width="939" height="369" rx="24" fill="#1b1e24" stroke="#3a3f49"/>
+  <g transform="translate(20 20)">
+    <rect x="0.0" y="0.0" width="102.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="0.0" width="102.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(250 20)">
+    <rect x="0.0" y="0.0" width="137.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="143.0" y="0.0" width="67.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(480 20)">
+    <rect x="0.0" y="0.0" width="67.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="73.0" y="0.0" width="64.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="143.0" y="0.0" width="67.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(710 20)">
+    <rect x="0.0" y="0.0" width="49.5" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="55.5" y="0.0" width="99.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="160.5" y="0.0" width="49.5" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(20 195)">
+    <rect x="0.0" y="0.0" width="102.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="0.0" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="80.5" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(250 195)">
+    <rect x="0.0" y="0.0" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="0.0" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="0.0" y="80.5" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="80.5" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(480 195)">
+    <rect x="0.0" y="0.0" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="0.0" y="80.5" width="102.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="108.0" y="0.0" width="102.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+  <g transform="translate(710 195)">
+    <rect x="0.0" y="0.0" width="137.0" height="155.0" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="143.0" y="0.0" width="67.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+    <rect x="143.0" y="80.5" width="67.0" height="74.5" rx="10" fill="#2f333b" stroke="#9aa1ad" stroke-opacity="0.55"/>
+  </g>
+</svg>

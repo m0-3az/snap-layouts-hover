@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="">
+    <entry name="HoverEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="ZoneWidth" type="Int">
+      <default>72</default>
+    </entry>
+    <entry name="ZoneHeight" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="HoverDelay" type="Int">
+      <default>250</default>
+    </entry>
+    <entry name="AutoFill" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="NeedsOthers" type="Bool">
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

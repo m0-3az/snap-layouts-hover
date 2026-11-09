@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "m0-3az"
+            }
+        ],
+        "Category": "Window Management",
+        "Description": "Windows 11 style snap layout flyout on the window caption buttons",
+        "EnabledByDefault": false,
+        "Icon": "preferences-system-windows-effect",
+        "Id": "snaplayoutshover",
+        "License": "MIT",
+        "Name": "Snap Layouts Hover",
+        "Version": "1.0.0"
+    },
+    "X-Plasma-API": "declarativescript",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+    "X-KDE-PluginKeyword": "snaplayoutshover"
+}
